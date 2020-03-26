@@ -12,6 +12,9 @@ import org.springframework.data.redis.serializer.RedisSerializationContext;
 
 import java.net.UnknownHostException;
 
+/**
+ * 设置redis存储值的时候的字符编码
+ */
 @Configuration
 public class MyRedisConfig {
 //    @Bean
@@ -32,6 +35,7 @@ public class MyRedisConfig {
 //        cacheManager.setTransactionAware(true);
 //        return cacheManager;
 //    }
+
 
     @Bean
     public RedisCacheManager JsonCacheManager(RedisConnectionFactory factory) {
