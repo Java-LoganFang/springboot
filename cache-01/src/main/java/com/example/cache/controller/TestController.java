@@ -3,14 +3,12 @@ package com.example.cache.controller;
 import com.example.cache.Bean.sp_type;
 import com.example.cache.mapper.sp_tpeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cache.annotation.Caching;
+import org.springframework.cache.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+//@CacheConfig(cacheNames = "emp")//注解之后下面的所有注解都不用写  catchName
 @RestController
 public class TestController {
     @Autowired

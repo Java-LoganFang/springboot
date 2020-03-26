@@ -1,6 +1,9 @@
 package com.example.cache.Bean;
 
-public class sp_type {
+import java.io.Serializable;
+
+//Serializable加入之后表示可以序列化
+public class sp_type implements Serializable {
     private int type_id;
     private String type_name;
     private int delete_time;
