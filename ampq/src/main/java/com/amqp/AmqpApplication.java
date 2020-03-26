@@ -1,5 +1,6 @@
 package com.amqp;
 
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 4，RabbitTemplate：给RabbitMQ发送和接受消息
  * 5，AmqpAdmin：RabbitMQ系统管理功能组件
  */
+@EnableRabbit//开启基于注解的RabbitMQ
 @SpringBootApplication
 public class AmqpApplication {
 
