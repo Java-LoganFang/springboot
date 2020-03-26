@@ -31,7 +31,8 @@ public class TestController {
      *      sync： 异步缓存
      */
 
-    @Cacheable(cacheNames = {"emp"})
+    //@Cacheable(cacheNames = {"emp"},key = "#root.method+'['+#id+']'")
+    @Cacheable(cacheNames = {"emp"},keyGenerator = "myKeyGenerator")
     @GetMapping("/emp/{id}")
     public sp_type getType(@PathVariable("id") Integer id){
         System.out.println("查询员工");
