@@ -17,9 +17,9 @@ class CacheApplicationTests {
     StringRedisTemplate stringRedisTemplate;//操作k-v都是字符串的
     @Autowired
     RedisTemplate redisTemplate;  //k-v都是对象
-
-    @Autowired
-    RedisTemplate<Object,Object> rmRedisTemplate;
+//
+//    @Autowired
+//    RedisTemplate<Object,Object> rmRedisTemplate;
 
     @Test
     void testReids(){
@@ -30,7 +30,7 @@ class CacheApplicationTests {
         type.setType_name("名字");
         type.setType_id(2);
         redisTemplate.opsForValue().set("Type",type);
-        rmRedisTemplate.opsForValue().set("Type",type);
+        //rmRedisTemplate.opsForValue().set("Type",type);
     }
 
     @Test
