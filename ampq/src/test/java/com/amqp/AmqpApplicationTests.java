@@ -28,11 +28,26 @@ class AmqpApplicationTests {
         rabbitTemplate.convertAndSend("exchange.direct","atguigu.news",map);
     }
 
+    /**
+     * 取数据
+     */
     @Test
     public  void receive(){
         Object o = rabbitTemplate.receiveAndConvert("atguigu.news");
         System.out.println(o.getClass());
         System.out.println(o);
     }
+
+    /**
+     * 广播模式
+     */
+    @Test
+    public void sendMsg(){
+        Map<String,Object> map = new HashMap<>();
+        map.put("msg","这是第一个消息");
+        map.put("data", Arrays.asList("Helloword",123,true));
+        rabbitTemplate.convertAndSend("exchange.fanout","",map);
+    }
+
 
 }
