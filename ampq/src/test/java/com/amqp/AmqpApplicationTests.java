@@ -1,6 +1,10 @@
 package com.amqp;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.amqp.core.AmqpAdmin;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +17,24 @@ import java.util.Map;
 class AmqpApplicationTests {
     @Autowired
     RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    AmqpAdmin amqpAdmin;
+
+    //创建交换机
+    @Test
+    void AmqpAdmin(){
+        //床架交换机
+//        amqpAdmin.declareExchange(new DirectExchange("amqpAdmin.exchange"));
+//        System.out.println("创建成功");
+
+        //创建队列
+        //amqpAdmin.declareQueue(new Queue("amqpadmin.queue",true));
+
+        //创建绑定规则
+        amqpAdmin.declareBinding(new Binding("amqpadmin.queue", Binding.DestinationType.QUEUE,"amqpAdmin.exchange","ampq.hahah",null));
+
+    }
 
     @Test
     void contextLoads() {
