@@ -3,6 +3,7 @@ package com.example.cache.controller;
 import com.example.cache.Bean.sp_type;
 import com.example.cache.mapper.sp_tpeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,11 +33,20 @@ public class TestController {
      */
 
     //@Cacheable(cacheNames = {"emp"},key = "#root.method+'['+#id+']'")
-    @Cacheable(cacheNames = {"emp"},keyGenerator = "myKeyGenerator")
+   //@Cacheable(cacheNames = {"emp"},keyGenerator = "myKeyGenerator" ,condition = "#id>1")
+    @Cacheable(cacheNames = {"emp"})
     @GetMapping("/emp/{id}")
     public sp_type getType(@PathVariable("id") Integer id){
         System.out.println("查询员工");
         System.out.println(sp_tpeMapper.getTypeByid(id));
         return  sp_tpeMapper.getTypeByid(id);
+    }
+
+
+    @GetMapping("/emp/update")
+    @CachePut(value = "emp",key = "#result.type_id")
+    public sp_type updateType(sp_type sp_type){
+        sp_tpeMapper.updatetype(sp_type);
+        return sp_type;
     }
 }
