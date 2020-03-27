@@ -21,4 +21,10 @@ public class TestController {
         System.out.println(port);
         return testService.hello()+port;
     }
+
+    @GetMapping(value = "/112")
+    public String controller1(){
+        System.out.println(port);
+        return testService.hello()+port;
+    }
 }
