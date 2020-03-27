@@ -8,17 +8,20 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ampq" />
         <module name="cache-01" />
+        <module name="任务" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ampq" target="1.8" />
       <module name="cache-01" target="1.8" />
+      <module name="任务" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ampq" options="-parameters" />
       <module name="cache-01" options="-parameters" />
+      <module name="任务" options="-parameters" />
     </option>
   </component>
 </project>
