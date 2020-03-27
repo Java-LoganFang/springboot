@@ -14,7 +14,7 @@ public class ScheduledService {
      * 【0 0 2-4 ？ * 1#1】 每个月的第一个周一凌晨2点到四点期间，每个整点都执行一次
      *
      */
-    @Scheduled(cron = "0*****MON-FRI")
+    @Scheduled(cron = "0 * * * * MON-FRI")
     public void hello(){
         System.out.println("hello ...");
     }
