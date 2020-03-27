@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/cloud-provider/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider2/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-user/pom.xml" />
+        <option value="$PROJECT_DIR$/登录/pom.xml" />
       </list>
     </option>
   </component>
