@@ -12,7 +12,10 @@
         <option value="$PROJECT_DIR$/安全/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-provider2/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-user/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

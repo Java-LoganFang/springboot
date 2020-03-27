@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
         <module name="cache-01" />
         <module name="安全" />
         <module name="ampq" />
         <module name="cloud-eureka" />
         <module name="任务" />
+        <module name="cloud-user" />
         <module name="cloud-provider" />
       </profile>
     </annotationProcessing>
@@ -19,6 +21,8 @@
       <module name="cache-01" target="1.8" />
       <module name="cloud-eureka" target="1.8" />
       <module name="cloud-provider" target="1.8" />
+      <module name="cloud-user" target="1.8" />
+      <module name="demo" target="1.8" />
       <module name="任务" target="1.8" />
       <module name="安全" target="1.8" />
     </bytecodeTargetLevel>
@@ -29,6 +33,8 @@
       <module name="cache-01" options="-parameters" />
       <module name="cloud-eureka" options="-parameters" />
       <module name="cloud-provider" options="-parameters" />
+      <module name="cloud-user" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="任务" options="-parameters" />
       <module name="安全" options="-parameters" />
     </option>
